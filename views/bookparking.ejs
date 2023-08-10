@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v2 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="/css/vendorform1.css">
+		<link rel="stylesheet" href="/css/button.css">
+
+
+
+	</head>
+
+	<body>
+       
+
+
+		
+		<%- include('partials/sidepanel2', {daata:dta}); %>
+	
+			<%
+			if(datas.length!=0){
+			var i=1;
+			datas.forEach(function(data){
+			%>
+
+
+
+
+	  <div class="container">
+        <header> Book Parking</header>
+        <form action="/done" method="POST">
+            <div class="form first">
+                <div class="details ID">
+                    <div class="fields">
+						<div class="input-field">
+                            <label>Customer Id</label>
+                            <input name="cid" type="text" placeholder="Enter Customer ID" >
+                        </div>
+						<div class="input-field">
+                            <label>Customer Name</label>
+                            <input name="cname" type="text" placeholder="Enter Customer Name" >
+                        </div>
+
+						<div class="input-field">
+                            <label>Vehicle Number</label>
+                            <input name="vnum" type="text" placeholder="Enter Vehicle Number" >
+                        </div>
+
+						<div class="input-field">
+                            <label>Parking Name</label>
+							<input  name="pname" type="text" value="<%=data.pname %> ">   
+						 </div>
+						 
+						 <div class="input-field">
+                            <label>Slot Number</label>
+							<input  name="slot" type="number ">   
+						 </div>
+
+						 <div class="input-field">
+                            <label>Area</label>
+							<input  name="area" type="text" value="<%=data.area %> ">   
+						 </div>
+                        <div class="input-field">
+                            <label>city</label>
+							<input  name="city" type="text" value="<%=data.city %> ">   
+						 </div>
+                        <div class="input-field">
+                            <label>time in</label>
+                            <input name="in" type="datetime-local" placeholder="Enter Time In" >
+                        </div>
+						<div class="input-field">
+                            <label>time out</label>
+                            <input name="out" type="datetime-local" placeholder="Enter Time Out" >
+                        </div>
+
+						<div class="input-field">
+                            <label>total fair</label>
+                            <input name="ttl" type="text" placeholder="calculate total fair" >
+							
+                        </div>
+					</div>
+					<button type="submit" class="button-5">Submit</button>
+				</div>
+	   		</form>
+		</div>
+			
+		   
+		
+			  
+			  
+		   
+			<%  i++; }) %>
+			<% } else{ %>
+			  <h1>not found</h1>
+			<% } %>
+		
+		
+
+
+	</body>
+
+
+</html>
+
+
+

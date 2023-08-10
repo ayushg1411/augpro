@@ -1,0 +1,514 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+</head> 
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+		<!--left-fixed -navigation-->
+	</div>
+<section>
+
+    
+     
+   
+  
+
+     
+   
+
+        <% let daata=[]%>
+        <h1>home</h1>
+        <%
+        if(dta.length!=0){
+        var i=1;
+        dta.forEach(function(data){
+        %>
+       
+        <% daata[i]=data.linktext%>
+       
+        <%  i++; }) %>
+        <% }%>    
+        
+       
+       
+    
+        
+    
+            <h1>hii</h1>
+        
+
+        
+                    
+                            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          
+                                <h3 style="  margin: 10px;  align-items: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> choose excel file to convert it into table</h3>
+                              <div style="display: flex; justify-content: center;">
+                                <input style="margin: 10px;" type="file" id="file_upload">
+                                <button onclick="upload()"  style="border: 1px; margin: 8px; background-color: #D6EEEE; color: black; border-radius: px; width: 80px; height: 40px;"> upload</button>
+                              </div>
+                                
+                                <table table border="1" align="center"  id="display_table_data"></table>
+                    
+        
+            
+                            <!-- file submit  -->
+        
+                            <form action="/uploads" method="post">
+                                <label for="name">file</label>
+                                <input name="name" type="text">
+                                <button type="submit"> upload</button>
+                            </form>
+                            <!-- fie submit end -->
+        
+                            
+        
+            
+         <form action="/" method="post">
+          <table border="1"   align="center">
+        
+           <tr  >
+              
+               <td  style="background-color: rgb(163, 228, 236); text-align: center;">TABLE NAME </td>
+               <td   style="background-color: rgb(163, 228, 236); text-align: center;">FIELD NAME</td>
+               <td   style="background-color: rgb(163, 228, 236); text-align: center;">DATATYPE</td>
+               <td   style="background-color: rgb(163, 228, 236); text-align: center;">LENGTH</td>
+               <td   style="background-color: rgb(163, 228, 236); text-align: center;">KEY</td>
+               <td   style="background-color: rgb(163, 228, 236); text-align: center;">STATUS</td>
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+           <tr>
+               <td  style="border: none;"><input type="text" name="tablename"></td>
+               <td  style="border: none;"><input type="text" name="fieldname"></td>
+               <td  style="border: none;"><input type="text" name="datatype"></td>
+               <td  style="border: none;"><input type="number" name="length" ></td>
+               <td  style="border: none;"><input type="text" name="key"></td>
+               <td  style="border: none;"><input type="number" name="status" ></td>
+             
+               
+           </tr>
+          
+           </tr>
+           
+          </table>
+        
+        
+        
+         
+        </form>
+        
+        
+        
+        
+        
+          <style>
+            #display_table_data{
+                border: 1px solid black;
+            }
+        
+            #display_table_data tr{
+                width: 160px;
+            }
+          
+        
+            th:nth-child(even), th:nth-child(odd) {
+          background-color: #D6EEEE;
+          text-align: center;
+          width: 160px;
+        }
+        
+        td:nth-child(odd), td:nth-child(even) {
+         
+          text-align: center;
+          width: 160px;
+        }
+        
+          </style>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                        <!--main content  -->
+              <!-- main content end -->
+                    </div>
+           
+        
+        
+        
+        
+        
+        
+        
+           
+        </body>
+	</div>
+</section>
+
+</body>
+</html>

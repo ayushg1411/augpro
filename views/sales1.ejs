@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/vendorform.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Responsive Regisration Form </title> 
+</head>
+<body>
+ 
+  
+    <%- include('partials/sidepanel2', {daata:dta}); %>
+
+    <div style="display:flex; margin-top:100px; margin-bottom:20px; margin-left:30px;  flex-direction:rows ">
+      <a href="/sales1"> <button  class="f-btn  button-3">NEW</button> </a>
+      <a href="/sales2" ><button class="f-btn  button-3">DISPLAY</button></a>
+      <a href="/sales3" ><button class="f-btn button-3" >CHANGE</button></a>
+     
+        </div>
+
+      
+
+   <div class="form-c">
+
+
+       <div class="container">
+        <header>Registration</header>
+
+        <form action="/sales1" method="POST">
+            <div class="form first" style="height:100%;width:100%;overflow:auto;padding:3%">
+
+
+                <div class="details ID">
+                    
+                    <span class="title">COMPANY CONTACT</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Company Name</label>
+                            <input  name="Cname" type="text" placeholder="enter company name" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Telephone</label>
+                            <input name="tel" type="number" placeholder="Enter Telephone" >
+                        </div>
+                        <div class="input-field">
+                            <label>Fax</label>
+                            <input name="fax" type="text" placeholder="Enter Fax" >
+                        </div>
+                        <div class="input-field">
+                            <label>City</label>
+                            <input name="city" type="text" placeholder="Enter your City" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Region/Mainland</label>
+                            <input name="reg" type="text" placeholder="Enter your Region/Mainland" >
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Email id</label>
+                            <input name="email" type="email" placeholder="Enter your email id" >
+                        </div>
+                        <div class="input-field">
+                            <label>Company Type/type of Services</label>
+                            <input name="Ctype" type="text" placeholder="Enter your Company type" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Branch/Subsidary</label>
+                            <input name="branch" type="text" placeholder="Enter Branch/Subsidary" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>ICV Certificate status</label>
+                            <input name="icv" type="text" placeholder="yes/no" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>ICV percentage</label>
+                            <input name="icv_percentage" type="text" placeholder="Enter ICV percentage" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Point of contact name & Title</label>
+                            <input name="point" type="text" placeholder="Point of contact name & Title" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Number of Employees</label>
+                            <input name="emp_no" type="text" placeholder="Enter Number of Employees" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Name of Owner/Promter</label>
+                            <input name="owner" type="text" placeholder="Enter name of Owner/Promter" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>PAN Number</label>
+                            <input name="pan" type="text" placeholder="Enter your PAN Number" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mailing Address</label>
+                            <input name="mailing" type="text" placeholder="Enter Mailing Address" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Country</label>
+                            <input name="cont" type="text" placeholder="Enter Your Country">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Zip/Postal Code</label>
+                            <input name="zip" type="text" placeholder="Enter Your Zip/Postal Code">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Website</label>
+                            <input name="web" type="text" placeholder="Enter Your website">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Parent Company</label>
+                            <input name="p_com" type="text" placeholder="Enter parent">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Trade Licence</label>
+                            <input name="trade" type="text" placeholder="Enter Trade Licence">
+                        </div>
+
+                        <div class="input-field">
+                            <label>VAT number/GSTIN/TRN Number</label>
+                            <input name="gstin" type="text" placeholder="Enter VAT number/GSTIN/TRN Number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>MSMED Number</label>
+                            <input name="msmed" type="text" placeholder="Enter your MSMED number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Contact Email</label>
+                            <input name="Cemail" type="email" placeholder="Enter your Contact Email">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Customer Refrence</label>
+                            <input name="Cref" type="text" placeholder="Customer refrence" required>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+            
+
+            <div class="form second" style="height:100%;width:100%;overflow:auto;padding:3%">
+               
+                <div class="details address">
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                    </div>
+                    <span class="title">COMPANY OVERVIEW</span>
+
+                    <div class="fields">
+                        
+                        <div class="input-field">
+                            <label>General Details Of Services</label>
+                            <input name="gen_detail" type="text" placeholder="Enter General Details Of Services">
+                        </div>
+                        <div class="input-field">
+                            <label>Date Of Comapny established</label>
+                            <input name="estd" type="text" placeholder="Enter Date Of Comapny established">
+                        </div>
+                        <div class="input-field">
+                            <label>Geographic Service Area</label>
+                            <input name="geo" type="text" placeholder="Enter Geographic Service Area">
+                        </div>
+                        <div class="input-field">
+                            <label>Business Type</label>
+                            <input name="Btype" type="text" placeholder="Enter Business Type">
+                        </div>
+                        <div class="input-field">
+                            <label>Branches And Affilates</label>
+                            <input name="affi" type="text" placeholder="Enter Branches and Affilates">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Additional Info</label>
+                            <input name="additional" type="text" placeholder="Enter additional Info">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gross Annual Sales</label>
+                            <input name="annual" type="text" placeholder="Enter Gross Annual Salaes">
+                        </div>
+
+                        <div class="input-field">
+                            <label>latest Financial Statements</label>
+                            <input name="statements" type="text" placeholder="Enter Latest financial statements">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Payment Credit Period</label>
+                            <input name="paymenrt" type="text" placeholder="Enter Payment Credit Period">
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">BANKING INFORMATION</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Bank Name</label>
+                            <input name="B_name" type="text" placeholder="Enter your Bank Name">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Payment Currency</label>
+                            <input name="currency" type="text" placeholder="Payment Currency">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Beneficiary Name</label>
+                            <input name="beneficiary" type="text" placeholder="Beneficiary Name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Sort Code</label>
+                            <input name="scode" type="text" placeholder="Enter your Sort Code" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Account number</label>
+                            <input name="acc_no" type="text" placeholder="Enter your Account number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>IBAN</label>
+                            <input name="iban" type="text" placeholder="Enter IBAN" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>ABA Numbers(for USA vendors)</label>
+                            <input name="aba" type="text" placeholder="Enter ABA Numbers(for USA vendors)">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Bank Address</label>
+                            <input name="b_add" type="text" placeholder="Enter Bank Address">
+                        </div>
+
+                        <div class="input-field">
+                            <label>IFSC Code</label>
+                            <input name="ifsc" type="text" placeholder="Enter IFSC Code">
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Swift Code</label>
+                            <input name="swf" type="text" placeholder="Enter IFSC Code">
+                        </div>
+                    </div>
+
+                    
+                </div> 
+
+                <div class="details family">
+                    <span class="title">CERTIFICATION</span>
+                    <p>I hereby affirm that all information supplied is true and accurate to the best of my knowledge and belief,
+                        and I understand that this information will be considered material in the evaluation of quotations, bids,
+                         and proposals. Notice must be given of any change in status impacting the information provided within 
+                         ten (10) days of said change.</p>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Printed/type Name</label>
+                            <input name="p_name" type="text" placeholder="Enter your Printed/type Name">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Signature</label>
+                            <input name="sign" type="file" placeholder="Signature">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Title</label>
+                            <input name="ttl" type="text" placeholder="Title" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date</label>
+                            <input name="dates" type="date" placeholder="Enter date" required>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="buttons">
+                        
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+ 
+   </div>
+
+    <script src="vendorform.js"></script>
+</body>
+</html>

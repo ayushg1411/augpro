@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+
+
+<link rel="stylesheet" href="/css/customer.css">
+<link rel="stylesheet" href="/css/button.css">
+
+
+
+</head>
+<body>
+
+    <%- include('partials/sidepanel2', {daata:dta}); %>
+    <div style="display:flex; margin-top:100px; margin-bottom:20px; margin-left:30px; margin-right:30px; flex-direction:rows ">
+        <a href="/admin1"> <button  class="f-btn  button-3">NEW</button> </a>
+        <a href="/admindis"><button class="f-btn  button-3">DISPLAY</button></a>
+       
+        <a href="/adminchng"><button class="f-btn  button-3">CHANGE</button></a>
+       </div>
+     
+      
+    
+       <%
+       if(datas.length!=0){
+       var i=1;
+       datas.forEach(function(data){
+       %>
+
+       <div class="container">
+        <header> G- Parking</header>
+       <form action="" method="">
+        <div class="form first">
+    
+    
+            <div class="details ID">
+                
+    
+                <span class="title">Customer Details</span>
+    
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Customer ID</label>
+                        <input  name="id" type="text"  value="<%=data.cid%>" placeholder="enter Name" readonly>
+                    </div>
+    
+                    <div class="input-field">
+                        <label>Name</label>
+                        <input  name="name" type="text"  value="<%=data.name%>" placeholder="enter Name" readonly>
+                    </div>
+    
+                    <div class="input-field">
+                        <label>Contact Number</label>
+                        <input name="cnum" type="number" value="<%=data.cnum%>" placeholder="Enter Your Contact Number" >
+                    </div>
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input name="Email" type="email" value="<%=data.Email%>" placeholder="Enter Email" >
+                    </div>
+    
+                    <div class="input-field">
+                        <label>State</label>
+                        <input name="state" type="text" value="<%=data.state%>" placeholder="Enter your State" >
+                    </div>
+    
+    
+                    <div class="input-field">
+                        <label>city</label>
+                        <input name="city" type="text" value="<%=data.city%>" placeholder="Enter your city" >
+                    </div>
+    
+                   
+    
+                    <div class="input-field">
+                        <label>Pincode</label>
+                        <input name="pin" type="number" value="<%=data.pin%>" placeholder="Enter your Pincode" >
+                    </div>
+    
+                    <div class="input-field">
+                        <label>Address</label>
+                        <input name="addr" type="text" value="<%=data.addr%>" placeholder="Enter your Address" required>
+                    </div>
+    
+                    <div class="input-field">
+                        <label>Vehicle number</label>
+                        <input name="vnum" type="text" value="<%=data.vnum%>" placeholder="Enter your Vehicle Number" >
+                    </div>
+    
+                    <div class="input-field">
+                        <label>Vehicle Type:</label>
+                            
+                        <input name="vtype" type="text" value="<%=data.vtype%>" placeholder="Enter your Vehicle Number" >
+
+                    </div>
+    
+                    
+                    
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+            </div> 
+        </div>
+    </form>
+       <%  i++; }) %>
+       <% } else{ %>
+         
+         <h1>not found</h1>
+     
+       <% } %>
+  
+      
+
+      
+    
+
+
+ 
+  
+
+
+
+    </body>
+
+
+</html>

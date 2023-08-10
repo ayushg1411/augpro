@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/vendorform.css">
+    <link rel="stylesheet" href="/css/button.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Responsive Regisration Form </title> 
+</head>
+<body>
+
+    <%- include('partials/sidepanel2', {daata:dta}); %>
+
+
+    <div style="display:flex; margin-top:100px; margin-bottom:20px; margin-left:30px;  flex-direction:rows ">
+        <a href="/sales1"> <button  class="f-btn  button-3">NEW</button> </a>
+        <a href="/sales2"><button class="f-btn  button-3">DISPLAY</button></a>
+        <a href="/sales3"><button class="f-btn button-3" >CHANGE</button></a>
+       
+          </div>
+
+
+    <div class="container">
+        <header> Parking Registration</header>
+
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+
+
+                <div class="details ID">
+                    
+        
+                    <span class="title">Parking Code </span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Vendor ID</label>
+                            <input  name="vid" type="text" value="<%=datt%>" readonly >
+                        </div>
+                        <div class="input-field">
+                            <label>Location code</label>
+                            <input name="loc_code" type="text" placeholder="Enter Location code" >
+                        </div>
+                       
+                        <div class="input-field">
+                            <label>Parking Name</label>
+                            <input name="pname" type="text" placeholder="Enter Parking Name" >
+                        </div>
+                     
+
+                        <div class="input-field">
+                            <label>city</label>
+                            <input name="city" type="text" placeholder="Enter your city" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Area</label>
+                            <input name="area" type="text" placeholder="Enter your Area" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>landmark</label>
+                            <input name="landmark" type="text" placeholder="Enter your landmark" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Pincode</label>
+                            <input name="pincode" type="number" placeholder="Enter your Pincode" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Latitude</label>
+                            <input name="latitude" type="text" placeholder="Enter your Latitude" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Longitude</label>
+                            <input name="longitude" type="text" placeholder="Enter your Longitude" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Min. cost</label>
+                            <input name="min_cost" type="text" placeholder="Enter min Cost" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Cost/hr</label>
+                            <input name="hcost" type="text" placeholder="Enter Cost/hr" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Vehicle Type:</label>
+                                 <select name="type">
+                                    <option class="input-field" value="twowheeler">Two Wheeler</option>
+                                    <option class="input-field" value="FourWheeler">Four Wheeler</option>
+                             </select>
+
+                        </div>
+                        
+                    </div>
+                    <button type="submit">Submit</button>
+                    
+                </div> 
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

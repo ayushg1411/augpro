@@ -1,0 +1,58 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+</head> 
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+		<!--left-fixed -navigation-->
+		<%- include('sidepanel'); -%>
+	</div>
+<section>
+	<div>
+		<table border="1" class="table table-bordered">
+			<tr>
+				<th>sno</th>
+				<th>LOC_CODE</th>
+				<th>LONGITUDE</th>
+				<th>LATITUDE</th>
+				
+		   
+			  
+			</tr>
+			
+			<%
+			if(userData.length!=0){
+			var i=1;
+			userData.forEach(function(data){
+			%>
+			<tr>
+				<td><%=i; %></td>
+				<td><%=data.userrole %></td>
+				<td><%=data.linkpage%></td>
+				<td><%=data.linktext %></td>
+				
+			  
+			  
+			</tr>
+			<%  i++; }) %>
+			<% } else{ %>
+				<tr>
+					<td colspan="4">No Data Found</td>
+				</tr>
+			<% } %>
+		</table>
+	</div>
+</section>
+
+
+<form action="/user" method="post">
+	<button type="submit">add more</button>
+</form>
+	
+<%- include('added'); -%>
+</body>
+</html>

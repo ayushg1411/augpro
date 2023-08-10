@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/vendorform.css">
+    <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/card.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Responsive Regisration Form </title> 
+</head>
+<body>
+<%- include('partials/sidepanel2', {daata:dta}); %>
+<div style="display:flex; margin-top:100px; margin-bottom:20px; margin-left:30px; margin-right:30px; flex-direction:rows ">
+        <a href="/sales1"> <button  class="f-btn  button-3">NEW</button> </a>
+        <a href="/sales2"><button class="f-btn  button-3">DISPLAY</button></a>
+       
+    
+</div>
+
+<div class="courses-container">
+    <div class="course">
+        <div class="course-preview">
+            <h2>CHANGE PAGE</h2>
+        </div>
+        <div class="course-info">
+            <div class="progress-container">
+                
+                
+            </div>
+            <h2>Choose id to change the data</h2>
+            <form action="/sales4" method="post">
+                <select class="slc" name="id" >
+               <%
+               if(datas.length!=0){
+               var i=1;
+               datas.forEach(function(data){
+               %>
+           
+                
+               <option  class="dopt"><br></option>
+               <option class="opt sopt" ><%=data.FID %> </option>
+               <option class="opt sopt"  ><%=data.Cname%>&nbsp; &nbsp;  <%=data.owner %></option>
+           
+                 
+                 
+              
+               <%  i++; }) %>
+               <% } else{ %>
+                 <h1>not found</h1>
+               <% } %>
+              </select>
+            <button class="button-3" type="submit"> Find</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+
+
+
+    
+
+    <script src="vendorform.js"></script>
+</body>
+</html>

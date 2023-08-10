@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/customer.css">
+    <link rel="stylesheet" href="/css/button.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Responsive Regisration Form </title> 
+</head>
+<body>
+
+    <%- include('partials/sidepanel2', {daata:dta}); %>
+
+
+    <div style="display:flex; margin-top:100px; margin-bottom:20px; margin-left:30px;  flex-direction:rows ">
+        <a href="/admin1"> <button  class="f-btn  button-3">NEW</button> </a>
+        <a href="/admindis"><button class="f-btn  button-3">DISPLAY</button></a>
+        <a href="/adminchng"><button class="f-btn button-3" >CHANGE</button></a>
+       
+          </div>
+          <div class="container">
+            <header> G-PARKING</header>
+    
+          <form action="/customerform" method="POST">
+              <div class="form first">
+  
+  
+                  <div class="details ID">
+                      
+          
+                      <span class="title">Customer Registration</span>
+  
+                      <div class="fields">
+                          <div class="input-field">
+                              <label>Name</label>
+                              <input  name="name" type="text" placeholder="enter Name" >
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Contact Number</label>
+                              <input name="cnum" type="number" placeholder="Enter Your Contact Number" >
+                          </div>
+                          <div class="input-field">
+                              <label>Email</label>
+                              <input name="Email" type="email" placeholder="Enter Email" >
+                          </div>
+  
+                          <div class="input-field">
+                              <label>State</label>
+                              <input name="state" type="text" placeholder="Enter your State" >
+                          </div>
+  
+  
+                          <div class="input-field">
+                              <label>city</label>
+                              <input name="city" type="text" placeholder="Enter your city" >
+                          </div>
+  
+                         
+  
+                          <div class="input-field">
+                              <label>Pincode</label>
+                              <input name="pin" type="number" placeholder="Enter your Pincode" >
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Address</label>
+                              <input name="addr" type="text" placeholder="Enter your Address" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Vehicle number</label>
+                              <input name="vnum" type="text" placeholder="Enter your Vehicle Number" >
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Vehicle Type:</label>
+                                   <select name="vtype">
+                                      <option class="input-field" value="two wheeler">Two Wheeler</option>
+                                      <option class="input-field" value="Four Wheeler">Four Wheeler</option>
+                               </select>
+  
+                          </div>
+  
+                          
+                          
+                      </div>
+                      <button type="submit">Submit</button>
+                      
+                  </div> 
+              </div>
+          </form>
+      </div>
+
+
+
+</body>
+</html>

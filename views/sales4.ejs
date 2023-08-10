@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+<link rel="stylesheet" href="/css/table.css">
+<link rel="stylesheet" href="/css/vendorform.css">
+
+
+
+</head>
+<body>
+    <div style="display:flex; margin-top:100px; margin-bottom:20px; margin-left:30px; margin-right:30px; flex-direction:rows ">
+        <a href="/sales1"> <button  class="f-btn  button-3">NEW</button> </a>
+        <a href="/sales2"><button class="f-btn  button-3">DISPLAY</button></a>
+       
+        <a href="/sales3"><button class="f-btn  button-3">CHANGE</button></a>
+       <form action="/updateform" method="post">
+    <input  type="hidden" name="idss" value="<%=datas[0].Cname%>" >
+        <button type="submit" class="f-btn  button-s">SAVE</button>
+       </form>
+   
+
+      
+     </div>
+
+
+
+
+    <br/>
+
+ 
+      
+    
+
+      <%- include('partials/sidepanel2', {daata:dta}); %>
+    
+      <%
+      if(datas.length!=0){
+      var i=1;
+      datas.forEach(function(data){
+      %>
+
+      
+      <div class="form-c">
+
+
+        <div class="container">
+         <header>Registration</header>
+ 
+         <form method="post" action="/actionform">
+             <div class="form first" style="height:100%;width:100%;overflow:auto;padding:3%">
+ 
+ 
+                 <div class="details ID">
+                     
+                     <span class="title">COMPANY CONTACT</span>
+ 
+                     <div class="fields">
+                         <div class="input-field">
+                             <label>Company Name</label>
+                             <input  name="Cname" type="text"  value="<%=data.Cname%>"  >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Telephone</label>
+                             <input name="tel" type="number"  value="<%=data.tel %>" >
+                         </div>
+                         <div class="input-field">
+                             <label>Fax</label>
+                             <input name="fax" type="text" value="<%=data.fax %>" >
+                         </div>
+                         <div class="input-field">
+                             <label>City</label>
+                             <input name="city" type="text" value="<%=data.city%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Region/Mainland</label>
+                             <input name="reg" type="text" value="<%=data.reg %>" >
+                         </div>
+                         
+                         <div class="input-field">
+                             <label>Email id</label>
+                             <input name="email" type="email" value="<%=data.email %>" >
+                         </div>
+                         <div class="input-field">
+                             <label>Company Type/type of Services</label>
+                             <input name="Ctype" type="text" value="<%=data.Ctype%>"  >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Branch/Subsidary</label>
+                             <input name="branch" type="text"value="<%=data.branch%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>ICV Certificate status</label>
+                             <input name="icv" type="text" value="<%=data.icv%>"  >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>ICV percentage</label>
+                             <input name="icv_percentage" type="text" value="<%=data.icv_percentage%>"  >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Point of contact name & Title</label>
+                             <input name="point" type="text" value="<%=data.point%>"  >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Number of Employees</label>
+                             <input name="emp_no" type="text" value="<%=data.emp_no%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Name of Owner/Promter</label>
+                             <input name="owner" type="text" value="<%=data.owner%>"  >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>PAN Number</label>
+                             <input name="pan" type="text" value="<%=data.pan%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Mailing Address</label>
+                             <input name="mailing" type="text" value="<%=data.mailing%>"  >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Country</label>
+                             <input name="cont" type="text" value="<%=data.cont%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Zip/Postal Code</label>
+                             <input name="zip" type="text" value="<%=data.zip%>" >
+                         </div>
+                         <div class="input-field">
+                            <label>General Details Of Services</label>
+                            <input name="gen_detail" type="text" value="<%=data.gen_deatils%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Date Of Comapny established</label>
+                            <input name="estd" type="text" value="<%=data.estd%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Geographic Service Area</label>
+                            <input name="geo" type="text" value="<%=data.geo%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Business Type</label>
+                            <input name="Btype" type="text" value="<%=data.Btype%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Branches And Affilates</label>
+                            <input name="affi" type="text" value="<%=data.affi%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Additional Info</label>
+                            <input name="additional" type="text" value="<%=data.additional%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gross Annual Sales</label>
+                            <input name="annual" type="text" value="<%=data.annual%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>latest Financial Statements</label>
+                            <input name="statements" type="text" value="<%=data.statements%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Payment Credit Period</label>
+                            <input name="paymenrt" type="text" value="<%=data.paymernt%>" >
+                        </div>
+ 
+                         <div class="input-field">
+                             <label>Website</label>
+                             <input name="web" type="text" value="<%=data.web%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Parent Company</label>
+                             <input name="p_com" type="text" value="<%=data.p_com%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Trade Licence</label>
+                             <input name="trade" type="text" value="<%=data.trade%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>VAT number/GSTIN/TRN Number</label>
+                             <input name="gstin" type="text" value="<%=data.gstin%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>MSMED Number</label>
+                             <input name="msmed" type="text" value="<%=data.msmed%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Contact Email</label>
+                             <input name="Cemail" type="email" value="<%=data.cemail%>" >
+                         </div>
+ 
+                         <div class="input-field">
+                             <label>Customer Refrence</label>
+                             <input name="Cref" type="text" value="<%=data.Cref%>" >
+                         </div>
+
+                         <div class="input-field">
+                            <label>General Details Of Services</label>
+                            <input name="gen_detail" type="text" value="<%=data.gen_deatils%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Date Of Comapny established</label>
+                            <input name="estd" type="text" value="<%=data.estd%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Geographic Service Area</label>
+                            <input name="geo" type="text" value="<%=data.geo%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Business Type</label>
+                            <input name="Btype" type="text" value="<%=data.Btype%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Branches And Affilates</label>
+                            <input name="affi" type="text" value="<%=data.affi%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Additional Info</label>
+                            <input name="additional" type="text" value="<%=data.additional%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gross Annual Sales</label>
+                            <input name="annual" type="text" value="<%=data.annual%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>latest Financial Statements</label>
+                            <input name="statements" type="text" value="<%=data.statements%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Payment Credit Period</label>
+                            <input name="paymenrt" type="text" value="<%=data.paymernt%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Bank Name</label>
+                            <input name="B_name" type="text" value="<%=data.B_name%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Payment Currency</label>
+                            <input name="currency" type="text" value="<%=data.currency%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Beneficiary Name</label>
+                            <input name="beneficiary" type="text" value="<%=data.benefeciary%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Sort Code</label>
+                            <input name="scode" type="text" value="<%=data.scode%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Account number</label>
+                            <input name="acc_no" type="text" value="<%=data.acc_no%>" >
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>IBAN</label>
+                            <input name="iban" type="text" value="Enter IBAN" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>IBAN</label>
+                            <input name="iban" type="text" value="<%=data.iban%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>ABA Numbers(for USA vendors)</label>
+                            <input name="aba" type="text" value="<%=data.aba%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Bank Address</label>
+                            <input name="b_add" type="text" value="<%=data.b_add%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>IFSC Code</label>
+                            <input name="ifsc" type="text"value="<%=data.ifsc%>" >
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Swift Code</label>
+                            <input name="swf" type="text" value="<%=data.swf%>" >
+                        </div>
+                        <div class="input-field">
+                            <label>Printed/type Name</label>
+                            <input name="p_name" type="text" value="<%=data.p_name%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Signature</label>
+                            <input name="sign" type="file"value="<%=data.sign%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Title</label>
+                            <input name="ttl" type="text" value="<%=data.ttl%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date</label>
+                            <input name="dates" type="date" value="<%=data.dates%>" >
+                        </div>
+                     </div>
+ 
+                   
+                 </div> 
+             </div>
+             
+ 
+           
+                  
+ 
+ 
+                      
+ 
+                         
+        
+         </form>
+  
+    </div>
+
+        
+   
+      <%  i++; }) %>
+      <% } else{ %>
+        
+        <h1>not found</h1>
+    
+      <% } %>
+
+
+ 
+  
+
+
+
+    </body>
+
+
+</html>

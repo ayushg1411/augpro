@@ -1,0 +1,97 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+</head> 
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+		<!--left-fixed -navigation-->
+		
+
+	</div>
+<section>
+	<div>
+		<h2>hello</h2>
+       
+      
+
+        
+	
+		<p>occured</p>
+		<div id="page-wrapper">
+			<div class="main-page">
+				<div class="tables">
+					<h2 class="title1">Tables</h2>
+					<div class="panel-body widget-shadow">
+						<h4>Basic Table:</h4>
+                        
+                             <div class="table">
+
+
+
+    <table border="1" class="table table-bordered">
+        <tr>
+            <th>sno</th>
+            <th>LOC_CODE</th>
+            <th>LONGITUDE</th>
+            <th>LATITUDE</th>
+            <th>COUNTRY</th>
+            <th>STATE</th>
+            <th>CITY</th>
+            <th>EDIT</th>
+            <TH>CHANGE</TH>
+       
+          
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.LOC_CODE %></td>
+            <td><%=data.LONGITUDE%></td>
+            <td><%=data.LATITUDE %></td>
+            <td><%=data.COUNTRY %></td>
+            <td><%=data.STATE %></td>
+            <td><%=data.CITY %></td>
+          
+          
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+  
+
+   <button style=" margin : 10px; height: 30px;"> <a href="/"><i class="fa fa-angle-right"></i> new registration</a></button>
+
+
+
+
+  
+    </div>
+                        
+					
+						
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	
+<%- include('added'); -%>
+	
+</body>
+</html>
+

@@ -1,0 +1,230 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!----======== CSS ======== -->
+        <link rel="stylesheet" href="/css/vendorform.css">
+        <link rel="stylesheet" href="/css/button.css">
+        <link rel="stylesheet" href="/css/card.css">
+         
+        <!----===== Iconscout CSS ===== -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
+        <title>Responsive Regisration Form </title> 
+    </head>
+    <body>
+
+
+        <%- include('partials/sidepanel2', {daata:dta}); %>
+        
+        <div class="container">
+           
+            <h1 style="margin-left: 380px;">Book Your Parking 🚗</h1><br><br>
+
+          
+         
+                  <div class="mb-3">
+                    
+                        <label class="lbl">State</label>
+                        <select name="type" id="type" class="form-control">
+                            <option class="opt" value=""><p class="opti">Select State</p></option>
+                            <% for(var count = 0; count < datas.length; count++) { %>
+                            <option class="opt" value="<%= datas[count].type %>"><%= datas[count].type %></option>
+                             <% } %>
+                        </select>
+                    
+                        <label class="lbl">City</label>
+                        <select name="city" id="city" class="form-control">
+                            <option class="opt" value=""> <p class="opti">Select city</p></option>
+                        </select>
+                    
+                        <label class="lbl">Area</label>
+                        <select name="pname" id="pname" class="form-control">
+                            <option class="opt" value=""><p class="opti">Select area</p></option>
+                        </select>
+                    
+                        <button  onclick="func()"  name="btn"  class="button-4" > click</button>
+
+                       </div>
+               
+                    <div class="mb-3">
+                        <label class="lbl">Landmark</label>
+                        <select name="head" id="head" class="form-control">
+                            <option class="opt" value=""><p class="opti">Select Landmark</p></option>
+                            </select>
+                    <button  onclick="func2()"  name="btn"  class="button-4" > click</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="lbl">Available Parking's</label>
+
+                        <select name="head2" id="head2" class="form-control">
+                            <option class="opt"><p class="opti">Select Available Parking</p></option>
+                        </select>
+                    
+
+                        <button  onclick="func3()"  name="btn3" id="btn3"  class="button-4"> final</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <div id="parent">
+
+                            <p id="child"></p>
+                            
+                        </div>
+                    </div>
+
+
+
+                    <div class="mb-3">
+                        <form  id="fotrms" action="/submitkaro" method="post">
+
+                            <label for="ip" hidden>hello</label>
+                            <input type="text" name="pname"  id="input" hidden>
+                            <button type="submit" class="button-4" style="float: left; border-radius: 22px;">SUBMIT</button>
+                        </form>
+                    </div>
+                   
+                    
+                   
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+
+
+
+
+    function _(element)
+    {
+        return document.getElementById(element);
+    }
+    
+    function fetch_data(parent_element, child_element, type)
+    {
+        fetch('/get_data?type='+type+'&parent_value='+parent_element.value+'').then(function(response){
+            return response.json();
+        }).then(function(responseData){
+    
+            var html = '';
+    
+            if(type == 'load_state')
+            {
+                html = '<option class="opt"  value=""><p class="opti">Select State</p></option>';
+            }
+    
+            if(type == 'load_city')
+            {
+                html = '<option class="opt" value="">Select City</option>';
+            }
+            if(type == 'load')
+            {
+                html = '<option class="opt" value="">Select Area</option>';
+            }
+
+            if(type == 'final')
+            {
+                html = '';
+                for(var count = 0; count < responseData.length; count++)
+            {
+                html +=  `<p>${responseData[count]}</p>`
+
+            }
+                 
+            
+    
+            child_element.innerHTML = html;
+            return;
+
+            }
+
+
+            if(type == 'load2')
+            {
+                html = '<option class="opt" value="">Select landmark</option>';
+                
+                for(var count = 0; count < responseData.length; count++)
+            {
+                html +=  `<option  class="opt" value="${responseData[count].pname }" ><div class="opt">${responseData[count].pname } ${responseData[count].area } ${responseData[count].min_cost } ${responseData[count].hcost } </div></option>`;
+
+            }
+                 
+            
+    
+            child_element.innerHTML = html;
+            return;
+
+                
+            }
+          
+    
+            for(var count = 0; count < responseData.length; count++)
+            {
+                html += '<option class="opt" value="'+responseData[count]+'"><p class="opti">'+responseData[count]+'</p></option>';
+            }
+    
+            child_element.innerHTML = html;
+        });
+    }
+    
+    _('type').onchange = function(){
+    
+        fetch_data(_('type'), _('city'), 'load_state');
+    
+    };
+    
+    _('city').onchange = function(){
+    
+        fetch_data(_('city'), _('pname'), 'load_city');
+    
+    };
+
+
+  function func()
+  {
+    fetch_data(_('pname'), _('head'), 'load');
+
+  }  
+
+  function func2()
+  {
+    fetch_data(_('head'), _('head2'), 'load2');
+
+  }
+
+  function func3()
+  {
+    fetch_data(_('head2'), _('child'), 'final');
+
+  }
+
+ const child=document.getElementById('child');
+ child.addEventListener('click',function handleclick(event){
+    console.log(event.target.innerHTML);
+    document.getElementById('input').value=event.target.innerHTML;
+    console.log(event.target.id);
+ });
+
+
+
+
+    
+    
+    
+    </script>
+
