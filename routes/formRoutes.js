@@ -1,3 +1,4 @@
+
 // routes/formRoutes.js
 const express = require('express');
 const router = express.Router();
@@ -187,21 +188,21 @@ event.on("onme", ()=>{
   // <a href="/generate"><i class="fa fa-angle-right"></i>l</a>
 
   const data = [
-    {  name :"ADMIN",   title: "HOME",link: "http://localhost:5050/home" },
-    {  name : "ADMIN",   title: "CUSTOMER",link:  "http://localhost:5050/login"  },
-    {  name : "ADMIN",   title: "USER",link:  "http://localhost:5050/user"  },
-    {  name : "ADMIN",   title: "VENDOR",link:  "http://localhost:5050/login"  },
-    {  name : "ADMIN",   title: "LOCATION INFO.",link:  "http://localhost:5050/generate"  },
-    {  name : "ADMIN",   title: "RANGE",link:  "http://localhost:5050/data"  },
-    {  name : "ADMIN",   title: "ADD TABLE",link:  "http://localhost:5050/excel"  },
-    {  name :"CUSTOMER",   title: "HOME",link: "http://localhost:5050/home" },
-    {  name : "CUSTOMER",   title: "CUSTOMER",link:  "http://localhost:5050/login"  },
-    {  name : "CUSTOMER",   title: "USER",link:  "http://localhost:5050/user"  },
-    {  name :"VENDOR",   title: "HOME",link: "http://localhost:5050/home" },
-    {  name : "VENDOR",   title: "CUSTOMER",link:  "http://localhost:5050/login"  },
-    {  name : "VENDOR",   title: "USER",link:  "http://localhost:5050/user"  },
-    {  name : "VENDOR",   title: "VENDOR",link:  "http://localhost:5050/login"  },
-    {  name : "VENDOR",   title: "LOCATION INFO.",link:  "http://localhost:5050/generate"  },
+    {  name :"ADMIN",   title: "HOME",link: "https://solu1.azurewebsites.net/home" },
+    {  name : "ADMIN",   title: "CUSTOMER",link:  "https://solu1.azurewebsites.net/login"  },
+    {  name : "ADMIN",   title: "USER",link:  "https://solu1.azurewebsites.net/user"  },
+    {  name : "ADMIN",   title: "VENDOR",link:  "https://solu1.azurewebsites.net/login"  },
+    {  name : "ADMIN",   title: "LOCATION INFO.",link:  "https://solu1.azurewebsites.net/generate"  },
+    {  name : "ADMIN",   title: "RANGE",link:  "https://solu1.azurewebsites.net/data"  },
+    {  name : "ADMIN",   title: "ADD TABLE",link:  "https://solu1.azurewebsites.net/excel"  },
+    {  name :"CUSTOMER",   title: "HOME",link: "https://solu1.azurewebsites.net/home" },
+    {  name : "CUSTOMER",   title: "CUSTOMER",link:  "https://solu1.azurewebsites.net/login"  },
+    {  name : "CUSTOMER",   title: "USER",link:  "https://solu1.azurewebsites.net/user"  },
+    {  name :"VENDOR",   title: "HOME",link: "https://solu1.azurewebsites.net/home" },
+    {  name : "VENDOR",   title: "CUSTOMER",link:  "https://solu1.azurewebsites.net/login"  },
+    {  name : "VENDOR",   title: "USER",link:  "https://solu1.azurewebsites.net/user"  },
+    {  name : "VENDOR",   title: "VENDOR",link:  "https://solu1.azurewebsites.net/login"  },
+    {  name : "VENDOR",   title: "LOCATION INFO.",link:  "https://solu1.azurewebsites.net/generate"  },
 
   ];
 
