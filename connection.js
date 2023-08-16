@@ -1,8 +1,8 @@
 const mysql= require("mysql");
 const conn=mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"",
+    host:"templesql.mysql.database.azure.com",
+    user:"templesql",
+    password:"Sql@12345",
     database:"admin"
 })
 
